@@ -1,5 +1,7 @@
 package ru.java.courses;
 
+import com.sun.jdi.StringReference;
+
 class Lesson2 {
 
     /**
@@ -11,8 +13,9 @@ class Lesson2 {
      * @return возвращаем только целую часть от полученного результата,
      * хвост отбрасываем без откругления
      */
-    static int formula(int x) {
-        return 0;
+    static int formula(int x)
+    {
+        return (int) (Math.sqrt(13*x + 13/x));
     }
 
     /**
@@ -29,7 +32,9 @@ class Lesson2 {
      * @return возвращаем инициалы в верхнем регистре разделенные точкой, как в примере выше
      */
     static String initials(String fullName) {
-        return null;
+        fullName.toUpperCase().split(" ");
+
+        return fullName.charAt(0) + ".";
     }
 
 }
