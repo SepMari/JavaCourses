@@ -32,9 +32,8 @@ class Lesson2 {
      * @return возвращаем инициалы в верхнем регистре разделенные точкой, как в примере выше
      */
     static String initials(String fullName) {
-        fullName.toUpperCase().split(" ");
-
-        return fullName.charAt(0) + ".";
+        String [] initials = fullName.split(" ");
+        return initials[0].toUpperCase().charAt(0) + "." + initials[1].toUpperCase().charAt(0) + "." + initials[2].toUpperCase().charAt(0) + ".";
     }
 
 }

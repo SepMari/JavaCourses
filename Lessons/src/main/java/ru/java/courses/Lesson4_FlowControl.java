@@ -19,8 +19,22 @@ public class Lesson4_FlowControl {
      * @return самую длинную строку из полученного массива
      */
     public static String task1(String[] strings) {
-        return null;
+        if (strings.length != 0){
+            int max = strings[0].length();
+            int k = 0;
+          for (int i = 1; i < strings.length; i++){
+                int size = strings[i].length();
+                    if (size > max){
+                        max = size;
+                        k = i;
+                    }
+            }
+            return strings[k];
+        } else return "";
+
     }
+
+
 
     /**
      * В рамках задания необходимо реализовать микро-калькулятор.
@@ -42,6 +56,16 @@ public class Lesson4_FlowControl {
      * @return целочисленный результат выполнения операции
      */
     public static int task2(int i, int k, char operation) {
-        return 0;
+        switch (operation) {
+            case '+': return (int) i + k;
+            case '-': return (int) i - k;
+            case '*': return (int) i * k;
+            case '/':
+                    if (k != 0) return (int) i / k;
+                    else return 0;
+            case '%': return (int) i % k;
+            default: return 0;
+        }
+
     }
 }
