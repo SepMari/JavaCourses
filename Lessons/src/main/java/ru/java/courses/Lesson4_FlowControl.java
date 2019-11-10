@@ -60,9 +60,7 @@ public class Lesson4_FlowControl {
             case '+': return (int) i + k;
             case '-': return (int) i - k;
             case '*': return (int) i * k;
-            case '/':
-                    if (k != 0) return (int) i / k;
-                    else return 0;
+            case '/': return (int) (k != 0 ? i / k : 0);
             case '%': return (int) i % k;
             default: return 0;
         }
