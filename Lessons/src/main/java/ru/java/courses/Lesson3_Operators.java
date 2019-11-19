@@ -18,23 +18,22 @@ public class Lesson3_Operators {
      * - получить первые n символов из строки можно методом .substring(0, n)
      */
 
-    // НЕ РАБОТАЕТ !!!!! ПЕРЕДЕЛАТЬ
+    // Не возвращает 10 символов.... ¯\_(ツ)_/¯
     public static String task1(int i, String str) {
         if (i > 0) {
-            return str += i;
+            return str + i;
         }
-        else if (i < 0) {
-            return str = i + str;
+        if (i < 0) {
+            return i + str;
         }
-        else if (i == 0) {
-            return str = null; // ХЗ
+        if (i == 0) {
+            return "0";
          }
-        else if (str.length() <= 10){
+        if (str.length() <= 10){
             return str;
         }
-        else {
-            return str.substring(9);
-        }
+        else return str.substring(0, 10);
+
 
     }
 
